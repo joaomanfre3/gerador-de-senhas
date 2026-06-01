@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-jb), ui-monospace, SFMono-Regular, monospace;
+
+  /* Tema "cofre/segurança": escuro com acento lima. Identidade própria. */
+  --color-bg: #0c0f14;
+  --color-card: #161b22;
+  --color-accent: #a3e635; /* lima */
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  color: #e6edf3;
+  background:
+    radial-gradient(75% 55% at 50% -10%, #1b2a16 0%, transparent 60%),
+    var(--color-bg);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #a3e635;
+  color: #0c0f14;
+}
+
+/* Slider de tamanho com cara consistente entre navegadores */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #2d333b;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid #0c0f14;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 3px solid #0c0f14;
+}
